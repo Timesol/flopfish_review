@@ -1,0 +1,21 @@
+
+#ignore folders
+venv/
+__pycache__/
+logs/
+migrations/
+
+
+#ignore files
+killunicorn.sh
+.env
+
+
+
+
+#ignore type
+
+*.pyc
+
+
+

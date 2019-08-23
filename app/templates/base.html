@@ -1,0 +1,29 @@
+
+{% block title %}
+    {% if title %}{{ title }} - Timenot Solutions - {% else %}{{ _('Welcome Timenot') }}{% endif %}
+{% endblock %}
+
+{% block head %}
+<script type="text/javascript" src="{{url_for('static', filename='dist/js/bootstrap.min.js')}}"></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dist/css/bootstrap.min.css') }}">
+
+{% endblock %}
+
+{% block navbar %}
+
+    
+{% endblock %}
+
+{% block content %}
+
+  
+
+        {% block app_content %}{% endblock %}
+    
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}
+
+

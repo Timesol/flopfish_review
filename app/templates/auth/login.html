@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block app_content %}
+    <h1>{{ _('Sign In') }}</h1>
+
+    <button class="btn btn-danger">Test</button>
+    <div >
+        {{form.username.label()}}
+        {{form.username()}}
+      
+           
+        </div>
+    </div>
+    <br>
+    <p>{{ _('New User?') }} <a href="{{ url_for('auth.register') }}">{{ _('Click to Register!') }}</a></p>
+    <p>
+        {{ _('Forgot Your Password?') }}
+        <a href="{{ url_for('auth.reset_password_request') }}">{{ _('Click to Reset It') }}</a>
+    </p>
+    <p>
+        {{ _('Change Password?') }}
+        <a href="{{ url_for('auth.change_password') }}">{{ _('Click to Change It') }}</a>
+
+
+
+    </p>
+{% endblock %}
