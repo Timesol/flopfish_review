@@ -1,4 +1,68 @@
 {% extends "base.html" %}
 {% block app_content %}
-Test new from google 666
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+<script type="text/javascript" src="{{url_for('static', filename='js/index.js')}}"></script>
+
+{% block scripts%}
+  <script>
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var uluru = {lat:  47.070281 ,lng: 15.450447};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 18, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+    </script>
+
+
+ 
+
+
+
+{% endblock %}
+
+{% block scripts2%} <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuzX_oUH3cmWFAD2md-4JCJk8Jxjq_j2Y&callback=initMap">
+    </script> {% endblock %}
+
+<div class="row image-slide">
+	<div class="col-xs-12 ">
+
+
+<img src="{{ url_for('static', filename='img/cubes.jpg') }}">
+
+<div class="container">
+
+  <div class="row site-header">
+<div class=" col-12"> <img src="{{ url_for('static', filename='img/icons/one.svg') }}"> Ansprechpartner <img src="{{ url_for('static', filename='img/icons/one.svg') }}"> Paket <img src="{{ url_for('static', filename='img/icons/one.svg') }}"> Lösung </div></div></div>
+
+
+
+
+
+<div class="section-1-container container " id="section-1-container"></div>
+<div class="section-2-container"  id="section-2-container" style="display:none;"><a href="#Contact" class="consult-b">Jetzt einen kostenlosen Beratungstermin vereinbaren</a></div>
+<div class="section-3-container" id="section-3-container"></div>
+<div class="section-4-container" id="section-4-container">></div>
+<div class="map-site-header">Wir sind hier</div>
+<div id="map"></div>
+
+<div class=" container section-5-container" id="Contact">
+
+
+  
+{% include 'contact.html'%}
+
+
+</div>
+
+
+<div class=" section-6-container" id="section-6-container"></div>
+<div class=" section-8-container" id="section-8-container"><div class="container">© myITBox 2019 | <a href="#">Impressum</a> | <a href="#">Datenschutz</a></div></div>
+
+
+
 {% endblock %}
