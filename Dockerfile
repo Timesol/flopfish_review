@@ -10,6 +10,7 @@ RUN venv/bin/pip install --upgrade pip
 RUN venv/bin/pip install -r requirements.txt
 RUN venv/bin/pip install gunicorn
 
+RUN sudo apt-get install gcc
 COPY app app
 COPY migrations migrations
 COPY default0.py config.py boot.sh ./
